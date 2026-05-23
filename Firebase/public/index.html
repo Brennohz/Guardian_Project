@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- ==================================================
+        CONFIGURAÇÕES
+    ================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Guardian">
+    <meta property="og:description" content="Resolva todos seus problemas de PC">
+    <meta http-equiv="content-language" content="pt-BR">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Guardian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Guardian.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="Imagens/Icone.png" type="image/x-icon" sizes="32x32">
+</head>
+
+<body>
+
+    <!-- ==================================================
+        HEADER
+    ================================================== -->
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <!-- Logo em texto e ícone -->
+                <img class="logoIcon"
+                    src="Imagens/IMG-20241023-WA0083-removebg-preview%20(1).png"
+                    alt="Logo Guardian">
+                <h1 id="Header-Titlte">GUARDIAN</h1>
+            </div>
+            <!-- Botão para download -->
+            <button class="btn-baixar">Baixar</button>
+
+            <div>
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <!-- ==================================================
+        PAGINA 1
+    ================================================== -->
+    <section class="content hidden">
+
+        <div class="text-section">
+            <h2 id="Description"><span class="highlight">Sua satisfação</span> é a nossa motivação.</h2>
+            <h3>Com um assistente inteligente</h3>
+            <p>
+                Na Guardian, temos orgulho de apresentar nosso aplicativo, desenvolvido para oferecer suporte a pessoas
+                que enfrentam problemas com seus computadores, sejam de hardware ou software.
+
+                Com uma interface intuitiva e ferramentas poderosas, nosso aplicativo foi projetado para diagnosticar e
+                solucionar uma ampla gama de problemas técnicos, de forma rápida e eficaz.
+            </p>
+            <!-- Botão de download gratuito -->
+            <button class="btn-download">Download Grátis</button>
+
+            <!-- Ícones de disponibilidade -->
+            <h6 class="disponivel-em"> Disponível em:
+                <i class="fa-brands fa-android"></i>
+                <i class="fa-brands fa-apple"></i>
+            </h6>
+        </div>
+
+        <!-- Imagem ilustrativa -->
+        <div class="image-section">
+            <img src="Imagens/image.png"
+                alt="Mulher sorrindo com notebook usando o Guardian">
+        </div>
+
+    </section>
+
+    <!-- ==================================================
+        PAGINA 2
+    ================================================== -->
+    <section class="content hidden">
+        <!-- Blocos de serviços -->
+        <div class="box1 Button" id="B1" onclick="showContent('1')">
+            <i class="fa-solid fa-keyboard fa-4x Iconspag2"></i>
+            <h2>Ajuda com Hardware</h2>
+        </div>
+        <div class="box1 Button" id="B2" onclick="showContent('2')">
+            <i class="fa-solid fa-cloud fa-4x Iconspag2"></i>
+            <h2>Ajuda com Software</h2>
+        </div>
+        <div class="box1 Button" id="B3" onclick="showContent('3')">
+            <i class="fa-solid fa-microchip fa-4x Iconspag2"></i>
+            <h2>Atualizações Precisas</h2>
+        </div>
+    </section>
+    <section class="hidden">
+        <div id="indicators2" class="indicators2">
+            <span class="indicator2" id="indicator21"></span>
+            <span class="indicator2" id="indicator22"></span>
+            <span class="indicator2" id="indicator23"></span>
+        </div>  
+        <div id="box-display" class="box">
+            
+            <div id="ContentBox" class="ContentBox1">
+                
+                <div class="text-content">
+                    <h2 id="content-title">Ajuda com Hardware</h2>
+                    <p id="content-text">
+                        A ajuda com hardware é fundamental para solucionar problemas em dispositivos como computadores,
+                        substituição de peças e manutenção preventiva. Esse suporte é essencial para evitar transtornos
+                        e aumentar a durabilidade dos dispositivos,
+                        seja para usuários domésticos ou empresas.
+                    </p>
+                    
+                    <img id="content-logo" class="logob"
+                        src="Imagens/Pag4/Guardian%20nome%20branco.png"
+                        alt="Logo Guardian Branco">
+                </div>
+                <img id="content-image" class="molier"
+                    src="Imagens/Pag4/molier%20ilustrate.png"
+                    alt="Ilustração de suporte de Hardware">
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- ==================================================
+        PAGINA 3
+    ================================================== -->
+    <section class="content hidden">
+        <h2 class="texto3">Utilizando os recursos da <span class="highlight3">Guardian</span> deixa tudo fácil</h2>
+        <div class="container3">
+
+            <!-- Vídeo explicativo -->
+            <div id="displayArea3">
+                <video id="videoPlayer" class="display-area3">
+                    <source id="videoSource" src="" type="video/mp4">
+                    Seu navegador não suporta o vídeo.
+                </video>
+                <div id="indicators" class="indicators">
+                    <span class="indicator" id="indicator1"></span>
+                    <span class="indicator" id="indicator2"></span>
+                    <span class="indicator" id="indicator3"></span>
+                </div>
+            </div>
+
+            <!-- Botões interativos -->
+            <div class="button-container3">
+                <div class="button3" onclick="playVideo(1)">
+                    <span class="button-number3"><img class="imgpag3"
+                            src="Imagens/pag3/1.png"
+                            alt="Ícone Passo 1"></span>
+                    <h2>Descreva o problema</h2><i class="fa-regular fa-comment fa-5x Icons"></i>
+                </div>
+                <div class="button3" onclick="playVideo(2)">
+                    <span class="button-number3"><img class="imgpag3"
+                            src="Imagens/pag3/2%20(1).png"
+                            alt="Ícone Passo 2"></span>
+                    <h2>analisamos o problema</h2><i class="fa-regular fa-lightbulb fa-5x Icons"></i>
+                </div>
+                <div class="button3" onclick="playVideo(3)">
+                    <span class="button-number3"><img class="imgpag3"
+                            src="Imagens/pag3/3.png"
+                            alt="Ícone Passo 3"></span>
+                    <h2>Observe o resultado</h2> <i class="fa-regular fa-circle-check fa-5x Icons"></i>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        </div>
+
+
+    </section>
+
+    <!-- ==================================================
+        PAGINA 4
+    ================================================== -->
+    <section class="hidden">
+        <main class="content pag4">
+            <h1>Perguntas Frequentes</h1>
+            <div class="accordian">
+                <div class="question">
+                    <h3>O que é o Guardian?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>O Guardian é um site que oferece soluções e tutoriais para a manutenção de desktops e laptops,
+                        facilitando o cuidado de dispositivos com dicas práticas e acessíveis. Ideal para quem busca
+                        suporte técnico simples e eficaz.</h4>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>O Guardian oferece tutoriais gratuitos?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>O Guardian oferece tutoriais gratuitos para ajudar na manutenção de desktops e laptops,
+                        facilitando o acesso a soluções práticas.</h4>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>Como funciona o suporte técnico oferecido pela Guardian?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>O suporte técnico da Guardian fornece tutoriais detalhados para resolver problemas de hardware e
+                        software. Oferece soluções simples e acessíveis, com guias passo a passo.</h4>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>O que acontece se meu problema não for resolvido por meio de atendimento online?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>Se o seu problema não for resolvido por meio do atendimento online no Guardian, o site pode
+                        orientar você a procurar suporte especializado ou fornecer informações sobre assistência local.
+                    </h4>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>Como posso agendar uma consulta ou atendimento técnico pelo Guardian?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>Para agendar uma consulta ou atendimento técnico pelo Guardian via Instagram, basta acessar o
+                        perfil oficial, enviar uma mensagem, informando seu nome e o tipo de atendimento desejado.</h4>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>Posso utilizar o Guardian para fazer upgrades no meu desktop ou laptop?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>Sim, o Guardian pode ajudar com upgrades em desktops e laptops, oferecendo diagnóstico,
+                        recomendação de componentes e instalação. Eles também orientam sobre a compatibilidade das
+                        peças.</h4>
+                </div>
+            </div>
+
+        </main>
+
+    </section>
+
+    <!-- ==================================================
+        PAGINA DE COMENTARIOS
+    ================================================== -->
+
+    <section class="hidden pag-c">
+        <h2>Experiência dos Usuarios</h2>
+        <main class="content pag-comnt"> 
+            <div class="carousel-container">
+                <button class="arrow left" onclick="prevComments()">&#8249;</button>
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <div class="comment">
+                            <i class="fa-solid fa-user-tie profile-pic fa-4x"></i>                          
+                              <h3 class="username">Erick Hiroshi</h3>
+                            <h5 class="username">Desenvolvedor Roblox</h5>
+                            <p class="comment-text">"Adorei este produto, super recomendo!"</p>
+                        </div>
+                        <div class="comment">
+                            <i class="fa-solid fa-user-tie profile-pic fa-4x"></i>    
+                            <h3 class="username">João Vitor</h3>
+                            <h5 class="username">Techleader & Pscicólogo</h5>
+                            <p class="comment-text">“Tive problemas com a conexãode Wi-Fi, isso estava gerando problemas com o meu trabalho, reportei à Guardian e resolveram a minha situação.”</p>
+                        </div>
+                        <div class="comment">
+                            <i class="fa-solid fa-user-tie profile-pic fa-4x"></i>    
+                            <h3 class="username">Brenno Oliveira</h3>
+                            <h5 class="username">Desenvolvedor Full Stack</h5>
+                            <p class="comment-text">“Meu sistema operacional não inicializava e apresentava comportamentos estranhos, apresentei para a Guardian e eles conseguram resolver o meu problema.” </p>
+                        </div>
+                        <div class="comment">
+                            <i class="fa-solid fa-user-tie profile-pic fa-4x"></i>    
+                            <h3 class="username">Mateus Henrique</h3>
+                            <h5 class="username">Designer Gráfico UI UX </h5>
+                            <p class="comment-text">“A minha situação era o HD do meu Computador, delatei a Guardian e conseguiram resolver meu problema com maestria.” </p>
+                        </div>
+                        <div class="comment">
+                            <i class="fa-solid fa-user-tie profile-pic fa-4x"></i>    
+                            <h3 class="username">Luis Victor</h3>
+                            <h5 class="username">Padeiro profissional</h5>
+                            <p class="comment-text">"Produto chegou no prazo, muito satisfeito."</p>
+                        </div>
+                        <div class="comment">
+                            <i class="fa-solid fa-user-tie profile-pic fa-4x"></i>    
+                            <h3 class="username">Henrique Gomes</h3>
+                            <h5 class="username">Farmaceutico Hospitalar</h5>
+                            <p class="comment-text">"Qualidade excelente e preço justo. Me ajudou muito!!"</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow right" onclick="nextComments()">&#8250;</button>
+            </div>
+        </main>
+    </section>
+
+    <!-- ==================================================
+        PAGINA FINAL
+    ================================================== -->
+    <section class="content hidden">
+        <main class="conteudoF">
+            <div class="conteudofinal">
+                <!-- Logo e mensagem final -->
+                <img class="logoF"
+                    src="Imagens/IMG-20241023-WA0083-removebg-preview%20(1).png"
+                    alt="Logo Guardian Final">
+                <h1 class="textoFH1">Guardian</h1>
+                <h2 class="textoFH2">Comece com o Guardian hoje</h2>
+                <p class="textoP1">Traga soluções mais eficiência e simplicidade para seus problemas com hardware e
+                    software.</p>
+                <!-- Botão de chamada para ação -->
+                <button class="btn-download2">Baixe Agora</button>
+            </div>
+        </main>
+    </section>
+
+    <!-- ==================================================
+        FOOTER
+    ================================================== -->
+    <footer>
+        <div class="footer-links">
+            <!-- Links de políticas -->
+            <a href="#">Termos e Condições</a>
+            <a href="#">Privacidade</a>
+            <a href="#">Cookies</a>
+        </div>
+        <p>Copyright © 2024 Guardian. Todos os direitos reservados</p>
+
+        <!-- Redes sociais -->
+        <div class="footer-social">
+            <a href="https://www.instagram.com/guardian_offycial/" target="_blank">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXJJREFUSEvFlc1NRDEMhGeb4ApUAly4UwASVAJI9AGUwQmohJ8DdypY3oc8T1aSzWaFnjaX/YntscdjZ6WFz2rh+NobwJGkK0knkk47VX7E3auku8nHv2eXVgUEfggLHHDuHZIhCWyfJsPbbFwCYPweQc926A9+L2F/nZMqAcicCo5b5TYAL4OaH0kXreRKALKn1Fb2AJPp4XT/Nn1/lHQu6VnSV/zvKmb/EmAdjpTpQ1AqK5tNIveSviUdBP8AYA8Df2cEACeCoxIaaIXdRLVzsEiESue42wCsKAfPbfAddFhp7mEXIAfrNd2Ka9kPA0AJVGxSFT37FwDc04MWRQZHECiKM0QRxlaRFcSnpzQ3Ge6zpHcGIKueTAme989WgGpQonTvG5bfZwQ1LVlZ1aC2VgW8l5mNrCWrKlNcDZqNvC6q9bsBKdOY56L54HiA8q4fWdfYZEU1V0XeP+jf3PcA/Gagsurt2NuTOdLUIZvFK/gFHzRoGdyhE9oAAAAASUVORK5CYII=" />
+            </a>
+        </div>
+
+    </footer>
+
+    <!-- ==================================================
+        SETA
+    ================================================== -->
+    <div class="seta-baixo"></div>
+
+    <!-- ==================================================
+        JAVASCRIPT 
+    ================================================== -->
+    <script src="Central.js"></script>
+    <script src="https://kit.fontawesome.com/d777240dff.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
