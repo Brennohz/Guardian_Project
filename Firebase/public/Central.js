@@ -36,19 +36,22 @@ const contentData = {
         title: "Ajuda com Hardware",
         text: "A ajuda com hardware é fundamental para solucionar problemas em dispositivos como computadores, substituição de peças e manutenção preventiva. Esse suporte é essencial para evitar transtornos eaumentar a durabilidade dos dispositivos, seja para usuários domésticos ou empresas.",
         logo: "Imagens/logo-texto-branco.png",
-        image: "Imagens/servico-hardware.png"
+        image: "Imagens/servico-hardware.png?v=2",
+        alt: "Ilustração de suporte de Hardware"
     },
     2: {
         title: "Ajuda com Software",
         text: "A ajuda com software oferece recursos como manuais, tutoriais e suporte técnico para auxiliar os usuários na resolução de problemas e no uso eficiente dos programas. Ela visa melhorar a experiência do usuário, Esse suporte é essencial para aumentar a produtividade e a satisfação.",
         logo: "Imagens/logo-texto-branco.png",
-        image: "Imagens/servico-software.png"
+        image: "Imagens/servico-software.png?v=2",
+        alt: "Ilustração de suporte de Software"
     },
     3: {
         title: "Atualizações precisas",
         text: "Solucionamos As atualizações de software são essenciais para corrigir erros, melhorar a segurança e otimizar o desempenho do computador. Elas mantêm o sistema e os aplicativos atualizados, garantindo estabilidade e proteção contra vulnerabilidades. problemas simples até complexos.",
         logo: "Imagens/logo-texto-branco.png",
-        image: "Imagens/servico-atualizacao.png"
+        image: "Imagens/servico-atualizacao.png?v=2",
+        alt: "Ilustração de Atualizações precisas"
     }
 };
 
@@ -90,6 +93,7 @@ function showContent(id) {
         document.getElementById('content-text').innerText = contentData[id].text;
         contentLogo.src = contentData[id].logo;
         contentImage.src = contentData[id].image;
+        contentImage.alt = contentData[id].alt;
 
         // Reseta a cor dos indicadores
         resetIndicators();
